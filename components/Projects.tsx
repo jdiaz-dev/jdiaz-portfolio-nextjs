@@ -25,7 +25,7 @@ export default function Projects() {
       description:
         "Una aplicación para hacer votaciones para las zonas y la cantidad de veces que uno desee, teniendo como resultado final las estadísticas de votación. En esta aplicación se puede retornar a la zona que votaste y continuar añadiendo votos. Esto fue posible al uso de tablas hash para cada zona.",
       image: "/images/political parties.png",
-      technologies: ["HTML", "CSS", "Angular"],
+      technologies: ["Angular"],
       link: "https://brave-jepsen-d793ab.netlify.app/",
     },
   ];
