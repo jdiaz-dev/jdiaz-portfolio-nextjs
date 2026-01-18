@@ -1,0 +1,167 @@
+@media (max-width: 1118px) {
+  header ul {
+    width: 45%;
+  }
+  .content section.front div.my-name h1 {
+    font-size: 530%;
+  }
+  .content section.front div.my-activity h2 {
+    font-size: 350%;
+  }
+  .content section.front div.litle-description {
+    font-size: 138%;
+  }
+  .content section.about-me {
+    font-size: 112%;
+  }
+}
+@media (max-width: 933px) {
+  .content section.about-me {
+    margin-bottom: 15%;
+  }
+  .content section.front div.first-sentence h2 {
+    font-size: 180%;
+  }
+  .content section.front div.my-name h1 {
+    font-size: 500%;
+  }
+  .content section.front div.my-activity h2 {
+    font-size: 310%;
+  }
+  .content section.front div.litle-description {
+    font-size: 120%;
+  }
+  .content section.about-me div.container-biography div.image img {
+    width: 80%;
+  }
+}
+@media (max-width: 772px) {
+  header ul {
+    width: 60%;
+  }
+}
+@media (max-width: 713px) {
+  .content section.about-me {
+    margin-bottom: 20%;
+  }
+  .content section.front div.first-sentence h2 {
+    font-size: 173%;
+  }
+  .content section.front div.my-name h1 {
+    font-size: 450%;
+  }
+  .content section.front div.my-activity h2 {
+    font-size: 240%;
+  }
+  .content section.about-me div.container-biography {
+    flex-flow: column;
+  }
+  .content section.about-me div.container-biography div.image img {
+    width: 50%;
+  }
+  .content div.my-technologies {
+    width: 100%;
+  }
+  .content div.container-projects div.project {
+    flex-direction: column;
+  }
+  .content
+    div.container-projects
+    div.project
+    div.description-project
+    .description-detail {
+    padding-left: 0%;
+    margin-left: 0%;
+  }
+  .content div.container-projects div.project-votes div.image-project {
+    order: 1;
+  }
+  .content
+    div.container-projects
+    div.project-votes
+    div.description-project
+    ul.tech-used {
+    justify-content: flex-end;
+  }
+  .content div.container-projects div.project-votes div.description-project {
+    text-align: right;
+    order: 1;
+  }
+  .content
+    div.container-projects
+    div.project-votes
+    div.description-project
+    .description-detail {
+    padding-right: 5%;
+  }
+}
+@media (max-width: 641px) {
+  header ul {
+    width: 100%;
+  }
+  .content section.front div.my-name h1 {
+    font-size: 410%;
+  }
+  .content section.front div.my-activity h2 {
+    font-size: 215%;
+  }
+  .content section div.box-title h3 {
+    flex-basis: 50%;
+    font-size: 140%;
+    font-weight: bolder;
+  }
+  .content section.contact-me h3.opinion {
+    font-size: 150%;
+  }
+  .content section.contact-me p {
+    font-size: 110%;
+  }
+}
+@media (max-width: 542px) {
+  .content section div.box-title {
+    justify-content: space-between;
+  }
+  .content section div.box-title h3 {
+    flex-basis: 80%;
+  }
+  .content section div.box-title div {
+    flex-basis: 20%;
+  }
+  .content div.container-projects div.project div.image-project img {
+    min-height: 40vh;
+  }
+}
+@media (max-width: 520px) {
+  .content section.front div.my-name h1 {
+    font-size: 340%;
+  }
+
+  .content section.front div.my-activity h2 {
+    font-size: 208%;
+  }
+  .content section.about-me div.container-biography div.image img {
+    width: 70%;
+  }
+  .content div.my-technologies ul li {
+    flex-basis: 45%;
+  }
+  #my-email {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  div.ornament-left {
+    left: 2%;
+  }
+  div.ornament-right {
+    right: 2%;
+  }
+}
+@media (max-width: 300px) {
+  div.ornament-left {
+    left: 1%;
+  }
+  div.ornament-right {
+    right: 1%;
+  }
+}

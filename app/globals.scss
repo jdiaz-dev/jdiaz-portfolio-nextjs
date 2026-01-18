@@ -1,0 +1,383 @@
+/* command to run scss:
+    sass --watch nombre.scss nombre.css
+ */
+@font-face {
+  font-family: "Rajdhani-Bold";
+  src: url(/fonts/Rajdhani-Bold.ttf);
+}
+@font-face {
+  font-family: "PTSans-Regular";
+  src: url(/fonts/PTSans-Regular.ttf);
+}
+@font-face {
+  font-family: "Catamaran-Regular";
+  src: url(/fonts/Catamaran-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #0a192f;
+  color: rgb(212, 202, 202);
+  font-family: "PTSans-Regular";
+}
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #0b1c35;
+
+  box-shadow: 0 10px 40px -10px #051530;
+  position: fixed;
+  z-index: 2;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform: translateY(0px);
+  left: 0;
+  top: 0;
+
+  ul {
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    margin-right: 5px;
+
+    li {
+      flex-basis: 25%;
+      margin: 5px;
+      padding: 10px;
+      background-color: rgb(2, 14, 26);
+      color: rgb(212, 202, 202);
+      text-align: center;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    li:hover {
+      background-color: rgb(3, 7, 10);
+    }
+  }
+}
+header:hover {
+  visibility: visible;
+}
+div.ornament {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24%;
+
+  .vertical-ornament {
+    height: 50%;
+    border-left: 1px solid rgb(212, 202, 202);
+    margin: 0 auto;
+  }
+}
+div.ornament-left {
+  position: fixed;
+  top: 0px;
+  left: 5%;
+}
+div.ornament-right {
+  position: fixed;
+  right: 5%;
+  display: flex;
+  padding-top: 19%;
+}
+div.ornament ul.tech-icons {
+  /* position: relative;
+  top: 50%; */
+  list-style: none;
+  text-align: center;
+}
+div.ornament ul.tech-icons li {
+  font-size: 150%;
+  margin-bottom: 11px;
+}
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 100%;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.content {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+
+  section {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.content {
+  section.front {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+
+    div.first-sentence h2 {
+      font-size: 200%;
+      color: rgba(67, 136, 201, 0.808);
+    }
+    div.my-name h1 {
+      font-size: 550%;
+      color: rgb(15, 158, 158);
+    }
+    div.my-activity h2 {
+      font-size: 400%;
+    }
+    div.litle-description {
+      font-size: 150%;
+    }
+  }
+}
+.content {
+  section {
+    div.box-title {
+      display: flex;
+      align-items: center;
+      h3 {
+        flex-basis: 50%;
+        font-size: 160%;
+        font-weight: bolder;
+      }
+      div {
+        flex-basis: 50%;
+        border-top: 1px solid rgb(8, 124, 124);
+      }
+    }
+  }
+  section.about-me {
+    font-size: 120%;
+    .box-title {
+      h3 {
+        font-family: "Rajdhani-Bold";
+      }
+    }
+
+    div.container-biography {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+
+      div.description {
+        flex-basis: 50%;
+      }
+      div.image {
+        flex-basis: 50%;
+        text-align: center;
+        img {
+          width: 60%;
+        }
+      }
+    }
+  }
+  div.my-technologies {
+    width: 50%;
+
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      list-style: square inside;
+      li {
+        flex-basis: 40%;
+      }
+    }
+  }
+}
+.content {
+  section.projects {
+    height: auto;
+    font-size: 120%;
+
+    .box-title {
+      h3 {
+        font-family: "Rajdhani-Bold";
+      }
+    }
+  }
+  div.container-projects {
+    div.project {
+      width: 100%;
+      min-height: 60vh;
+      display: flex;
+      margin-bottom: 6%;
+
+      div.image-project {
+        flex-basis: 60%;
+        img {
+          width: 100%;
+          min-height: 55vh;
+          height: auto;
+        }
+      }
+      div.description-project {
+        h3 {
+          font-family: "Rajdhani-Bold";
+        }
+        text-align: right;
+        flex-basis: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .description-detail {
+          width: 100%;
+          padding: 5%;
+          padding-left: 15%;
+          background-color: #112240;
+          margin-left: -20%;
+        }
+
+        ul.tech-used {
+          display: flex;
+          flex-direction: row;
+          list-style: none;
+          justify-content: flex-end;
+
+          li {
+            flex-basis: 20%;
+            text-align: center;
+            /* border: 1px solid white; */
+          }
+        }
+        ul.external-links {
+          display: flex;
+          justify-content: flex-end;
+          list-style: none;
+          li {
+            margin: 10px;
+            a {
+              i {
+                color: rgb(212, 202, 202);
+              }
+              i:hover {
+                color: rgb(56, 146, 182);
+              }
+            }
+          }
+        }
+      }
+    }
+    div.project-votes,
+    div.project-vocabulary  {
+      div.image-project {
+        order: 2;
+      }
+      div.description-project {
+        text-align: left;
+        order: 1;
+
+        .description-detail {
+          width: 100%;
+          padding: 5%;
+          padding-right: 15%;
+          margin-left: 0;
+          z-index: 2;
+        }
+
+        ul.tech-used {
+          justify-content: flex-start;
+        }
+        ul.external-links {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}
+.content {
+  section.contact-me {
+    font-family: "Catamaran-Regular";
+    text-align: center;
+    h3,
+    p {
+      width: 47%;
+      margin: 0px auto;
+    }
+    h3.email {
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 130%;
+      text-align: center;
+    }
+
+    h3.opinion {
+      padding-bottom: 5px;
+      border-bottom: 1px solid rgb(15, 158, 158);
+      margin-bottom: 17px;
+      font-size: 170%;
+    }
+  }
+}
+footer {
+  text-align: center;
+}
+
+
+
+/* styles to hidde headder and scroll to section */
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #0b1c35;
+  box-shadow: 0 10px 40px -10px #051530;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  
+  /* Transiciones suaves mejoradas */
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Header visible */
+.header-visible {
+  transform: translateY(0px);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Header oculto */
+.header-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* En la parte superior */
+.header-at-top {
+  opacity: 1;
+  box-shadow: none;
+}
+
+/* Después de hacer scroll */
+.header-scrolled {
+  opacity: 0.96;
+  box-shadow: 0 10px 40px -10px #051530;
+  backdrop-filter: blur(10px);
+  background-color: rgba(11, 28, 53, 0.95);
+}
+
+/* Hover para mostrar siempre */
+header:hover {
+  opacity: 1 !important;
+}
