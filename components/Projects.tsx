@@ -10,6 +10,62 @@ interface Project {
   link: string;
 }
 
+const styles = {
+  projects: {
+    height: "auto",
+    fontSize: "120%",
+  },
+  project: {
+    width: "100%",
+    minHeight: "60vh",
+    display: "flex",
+    marginBottom: "6%",
+  },
+  imageContainer: {
+    flexBasis: "60%",
+  },
+  image: {
+    width: "100%",
+    minHeight: "55vh",
+    height: "auto",
+  },
+
+  descriptionProject: {
+    textAlign: "right",
+    flexBasis: "40%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-evenly",
+  },
+  projectTitle: {
+    fontFamily: "Rajdhani-Bold",
+  },
+  descriptionDetail: {
+    width: "100%",
+    padding: "5%",
+    paddingLeft: "15%",
+    backgroundColor: "#112240",
+    marginLeft: "-20%",
+  },
+  techUsed: {
+    display: "flex",
+    flexDirection: "row",
+    listStyle: "none",
+    justifyContent: "flex-end",
+  },
+  externalLinks: {
+    display: "flex",
+    justifyContent: "flex-end",
+    listStyle: "none",
+  },
+  link: {
+    color: "rgb(212, 202, 202)",
+    ":hover": {
+      color: "rgb(56, 146, 182)",
+    },
+  },
+} as const;
+
 export default function Projects() {
   const projects: Project[] = [
     {
@@ -32,9 +88,9 @@ export default function Projects() {
 
   return (
     <>
-      <section className="projects">
+      <section style={styles.projects}>
         <div className="box-title">
-          <h3>Proyectos construidos</h3>
+          <h3 style={{ fontFamily: "Rajdhani-Bold" }}>Proyectos construidos</h3>
           <div></div>
         </div>
 
@@ -45,32 +101,46 @@ export default function Projects() {
               className={`project ${
                 index % 2 === 0 ? "project-even" : "project-odd"
               }`}
+              style={styles.project}
             >
-              <div className="image-project">
+              <div style={styles.imageContainer}>
                 <Image
                   src={project.image}
                   alt={project.title}
                   width={600}
                   height={400}
-                  style={{ width: "100%", height: "auto" }}
+                  style={styles.image}
                 />
               </div>
-              <div className="description-project">
-                <h3>{project.title}</h3>
-                <div className="description-detail">{project.description}</div>
-                <ul className="tech-used">
+              <div style={styles.descriptionProject}>
+                <h3 style={styles.projectTitle}>{project.title}</h3>
+                <div style={styles.descriptionDetail}>
+                  {project.description}
+                </div>
+                <ul style={styles.techUsed}>
                   {project.technologies.map((tech, techIndex) => (
-                    <li key={techIndex}>{tech}</li>
+                    <li
+                      style={{
+                        flexBasis: "20%",
+                        textAlign: "center",
+                      }}
+                      key={techIndex}
+                    >
+                      {tech}
+                    </li>
                   ))}
                 </ul>
-                <ul className="external-links">
-                  <li>
+                <ul style={styles.externalLinks}>
+                  <li style={{ margin: "10px" }}>
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="fas fa-external-link-alt"></i>
+                      <i
+                        className="fas fa-external-link-alt"
+                        style={styles.link}
+                      ></i>
                     </a>
                   </li>
                 </ul>
