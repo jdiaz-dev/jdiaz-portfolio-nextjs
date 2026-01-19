@@ -38,7 +38,6 @@ export default function TechOrnamentsRight() {
               fontFamily="none"
               fontWeight="none"
               fontSize="none"
-              textAnchor="none"
               style={{ mixBlendMode: "normal" }}
             >
               <path d="M0,172v-172h172v172z" fill="#0a192f"></path>
