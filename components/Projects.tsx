@@ -104,9 +104,9 @@ export default function Projects() {
 
   return (
     <>
-      <section style={styles.projects}>
+      <section className="portfolio" style={styles.projects}>
         <div className="box-title">
-          <h3 style={{ fontFamily: "Rajdhani-Bold" }}>Proyectos construidos</h3>
+          <h3 style={{ fontFamily: "Rajdhani-Bold" }}>Portafolio</h3>
           <div></div>
         </div>
 
