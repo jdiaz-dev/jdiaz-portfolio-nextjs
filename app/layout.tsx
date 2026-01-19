@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.scss";
 import "./responsive.scss";
 import Script from "next/script";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Jonathan Díaz - Portfolio",
@@ -15,15 +16,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    <html lang="en">
       <head>
-        {/* Font Awesome */}
         <Script
           src="https://kit.fontawesome.com/9a7107e667.js"
           crossOrigin="anonymous"
           strategy="beforeInteractive"
         />
-        {/* IcoMoon */}
         <link
           rel="stylesheet"
           href="https://i.icomoon.io/public/temp/27d5cf4f96/UntitledProject/style-svg.css"
@@ -33,7 +32,10 @@ export default function RootLayout({
           strategy="lazyOnload"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
