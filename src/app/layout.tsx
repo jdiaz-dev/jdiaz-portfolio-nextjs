@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.scss";
 import "./responsive.scss";
 import Script from "next/script";
-import Header from "@/components/Header";
+import Header from "@/src/components/Header";
 
 export const metadata: Metadata = {
   title: "Jonathan Díaz - Portfolio",

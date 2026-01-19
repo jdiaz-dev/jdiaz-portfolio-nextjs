@@ -1,10 +1,10 @@
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import TechOrnamentsLeft from "@/components/TechOrnamentsLeft";
-import TechOrnamentsRight from "@/components/TechOrnamentsRight";
+import Hero from "@/src/components/Hero";
+import About from "@/src/components/About";
+import Projects from "@/src/components/Projects";
+import Contact from "@/src/components/Contact";
+import Footer from "@/src/components/Footer";
+import TechOrnamentsLeft from "@/src/components/TechOrnamentsLeft";
+import TechOrnamentsRight from "@/src/components/TechOrnamentsRight";
 
 export default function Home() {
   return (
