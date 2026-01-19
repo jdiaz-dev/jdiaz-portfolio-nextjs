@@ -4,7 +4,6 @@ export default function About() {
   const technologies = [
     "Node.js",
     "Nest.js",
-    "React.js",
     "MongoDB",
     "PostgreSQL",
     "Cloudflare",

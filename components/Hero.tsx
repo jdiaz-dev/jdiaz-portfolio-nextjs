@@ -8,7 +8,7 @@ export default function Hero() {
         <h1>Jonathan Díaz</h1>
       </div>
       <div className="my-activity">
-        <h2>Ingeniero de software Backend</h2>
+        <h2>Ingeniero de Software Backend</h2>
       </div>
       <div className="litle-description">
         Especialista en sistemas de alto rendimiento para el sector financiero
