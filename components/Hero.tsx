@@ -8,10 +8,10 @@ export default function Hero() {
         <h1>Jonathan Díaz</h1>
       </div>
       <div className="my-activity">
-        <h2>Construyo software personalizado y a medida</h2>
+        <h2>Ingeniero de software Backend</h2>
       </div>
       <div className="litle-description">
-        Soy desarrollador de software con un enfoque en el producto, funcionalidades y el negocio de las personas
+        Especialista en sistemas de alto rendimiento para el sector financiero
       </div>
     </section>
   );

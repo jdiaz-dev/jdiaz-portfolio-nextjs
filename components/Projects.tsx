@@ -85,19 +85,27 @@ const styles = {
 export default function Projects() {
   const projects: Project[] = [
     {
-      title: "Software para nutricionistas",
+      title: "Conciliador de Pagos en Tiempo Real",
       description:
-        "Software especializado para nutricionistas destinado a acelerar la creación de planes nutricionales de los pacientes. Permite también guardar y gestionar los pacientes, creación de recetas personalizadas, monitorear proceso del paciente, chat en tiempo real.",
-      image: "/images/nutrition.png",
-      technologies: ["Nest.js", "React.js", "MongoDB", "AWS"],
+        "Sistema de conciliación de pagos serverless de alto rendimiento desarrollado para un importante banco argentino con más de 6 millones de usuarios activos. El sistema procesa transacciones en tiempo real, garantizando la reconciliación precisa de millones de operaciones mensuales.",
+      image: "/images/fintech4.png",
+      technologies: ["AWS", "Node.js", "OpenSearch"],
       link: "https://nutrition.athvio.com/landing",
     },
     {
-      title: "Simulación de multiples votos electorales",
+      title: "Gestor de Transacciones Para Pasarela de Pagos",
       description:
-        "Una aplicación para hacer votaciones para las zonas y la cantidad de veces que uno desee, teniendo como resultado final las estadísticas de votación. En esta aplicación se puede retornar a la zona que votaste y continuar añadiendo votos. Esto fue posible al uso de tablas hash para cada zona.",
-      image: "/images/political parties.png",
-      technologies: ["Angular"],
+        "Sistema de manejo de transacciones distribuidas provenientes de dispositivos POS y links de pago desarrollado para una pasarela de pagos peruana. El sistema administra y procesa pagos de forma segura garantizando las operaciones de 5500 comercios afiliados.",
+      image: "/images/fintech3.webp",
+      technologies: ["Node.js", "MySQL", "MongoDB", "Docker"],
+      link: "https://brave-jepsen-d793ab.netlify.app/",
+    },
+    {
+      title: "Plataforma de consulta de pagos de cuotas bancarias",
+      description:
+        "Sistema de consulta de pagos de cuotas bancarias desarrollado para una entidad financiera. El software permite a los usuarios bancarios consultar el estado de sus pagos de manera rápida y segura.",
+      image: "/images/fintech2.jpg",
+      technologies: ["Node.js", "Azure", "SQL Server"],
       link: "https://brave-jepsen-d793ab.netlify.app/",
     },
   ];
@@ -165,7 +173,7 @@ export default function Projects() {
                       </li>
                     ))}
                   </ul>
-                  <ul
+                  {/* <ul
                     style={{
                       ...styles.externalLinks,
                       ...(isEven ? {} : styles.externalLinksLeft),
@@ -183,7 +191,7 @@ export default function Projects() {
                         ></i>
                       </a>
                     </li>
-                  </ul>
+                  </ul> */}
                 </div>
               </div>
             );
