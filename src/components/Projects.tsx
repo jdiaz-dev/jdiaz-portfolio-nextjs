@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { projects } from "../data/projects";
+import Link from "next/link";
 
 const styles = {
   projects: {
@@ -21,7 +23,7 @@ const styles = {
   },
   image: {
     width: "100%",
-    minHeight: "55vh",
+    minHeight: "60vh",
     height: "auto",
   },
   descriptionProject: {
@@ -74,46 +76,7 @@ const styles = {
   },
 } as const;
 
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  technologies: string[];
-  link: string;
-}
-
 export default function Projects() {
-  const projects: Project[] = [
-    {
-      id: 1,
-      title: "Conciliador de Pagos en Tiempo Real",
-      description:
-        "Sistema de conciliación de pagos serverless de alto rendimiento desarrollado para un importante banco argentino con más de 6 millones de usuarios activos. El sistema procesa transacciones en tiempo real, garantizando la reconciliación precisa de millones de operaciones mensuales.",
-      image: "/images/fintech4.png",
-      technologies: ["AWS", "Node.js", "OpenSearch"],
-      link: "https://nutrition.athvio.com/landing",
-    },
-    {
-      id: 2,
-      title: "Gestor de Transacciones Para Pasarela de Pagos",
-      description:
-        "Sistema de manejo de transacciones distribuidas provenientes de dispositivos POS y links de pago desarrollado para una pasarela de pagos peruana. El sistema administra y procesa pagos de forma segura garantizando las operaciones de 5500 comercios afiliados.",
-      image: "/images/fintech3.webp",
-      technologies: ["Node.js", "MySQL", "MongoDB", "Docker"],
-      link: "https://brave-jepsen-d793ab.netlify.app/",
-    },
-    {
-      id: 3,
-      title: "Plataforma de consulta de pagos de cuotas bancarias",
-      description:
-        "Sistema de consulta de pagos de cuotas bancarias desarrollado para una entidad financiera. El software permite a los usuarios bancarios consultar el estado de sus pagos de manera rápida y segura.",
-      image: "/images/fintech2.jpg",
-      technologies: ["Node.js", "Azure", "SQL Server"],
-      link: "https://brave-jepsen-d793ab.netlify.app/",
-    },
-  ];
-
   return (
     <>
       <section className="portfolio" style={styles.projects}>
@@ -158,6 +121,27 @@ export default function Projects() {
                     }}
                   >
                     {project.description}
+                    <div
+                      style={{
+                        marginTop: "20px",
+                        textAlign: isEven ? "right" : "left",
+                      }}
+                    >
+                      <Link
+                        href={project.detailUrl}
+                        style={{
+                          display: "inline-block",
+                          padding: "10px 20px",
+                          backgroundColor: "#64ffda",
+                          color: "#0a192f",
+                          textDecoration: "none",
+                          borderRadius: "4px",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        Leer más
+                      </Link>
+                    </div>
                   </div>
                   <ul
                     style={{
