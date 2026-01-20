@@ -17,7 +17,7 @@ export const projectsData: Project[] = [
     overview:
       "Sistema de conciliación de pagos serverless de alto rendimiento desarrollado para un importante banco argentino con más de 6 millones de usuarios activos. El sistema procesa transacciones en tiempo real, garantizando la conciliación precisa de millones de operaciones mensuales.",
     architectureDescription:
-      "Implementé una arquitectura completamente serverless utilizando los servicios nativos de AWS, lo que permitió:",
+      "Se implementó una arquitectura completamente serverless utilizando los servicios nativos de AWS, lo que permitió:",
     architecturePoints: [
       "Escalamiento automático basado en demanda",
       "Costos optimizados (pago por uso)",
@@ -85,19 +85,13 @@ Seguridad:
       "Sistema de manejo de transacciones distribuidas provenientes de dispositivos POS y links de pago desarrollado para una pasarela de pagos peruana. El sistema administra y procesa pagos de forma segura garantizando las operaciones de 5500 comercios afiliados.",
 
     architectureDescription:
-      "Implementé el patrón SAGA choreography para coordinar transacciones distribuidas:",
+      "Se implementó una arquitectura de microservicios en Node.js basada en eventos y HTTP lo que permitió:",
     architecturePoints: [
-      "Apache Kafka como bus de eventos para desacoplamiento",
-      "Lógica de compensación personalizada por microservicio",
-      "Garantía de integridad de datos en escenarios de fallo parcial",
-      "Stored procedures optimizados para reportería",
+      "Desacoplamiento de servicios para mayor resiliencia",
+      "Escalabilidad independiente para cada servicio según la demanda",
+      "Resiliencia y aislamiento de fallos",
     ],
     components: [
-      {
-        title: "Patrón SAGA",
-        description:
-          "Implementación choreography para transacciones distribuidas con compensación automática en caso de fallos.",
-      },
       {
         title: "Apache Kafka",
         description:
@@ -114,22 +108,13 @@ Seguridad:
           "Servicios independientes con lógica de negocio aislada y operaciones idempotentes.",
       },
     ],
-    techStack: `Arquitectura:
+    techStack: `Backend:
 ├── Microservicios (Node.js)
-├── Apache Kafka Event Bus
-├── PostgreSQL Database
-└── SAGA Orchestration Logic
-
-Características Clave:
-├── Rollback automático en fallos
-├── Operaciones idempotentes
-├── Event sourcing
-└── Transacciones de compensación`,
+├── Transisor de mensajes Apache Kafka
+└── Base de datos PostgreSQL`,
     businessImpact: [
-      "Procesamiento confiable de pagos para miles de comercios",
-      "Mantenimiento de integridad de datos en entorno distribuido complejo",
-      "Escalabilidad para agregar nuevos servicios sin afectar existentes",
-      "Mejora en la agilidad del negocio mediante arquitectura basada en eventos",
+      "Usuarios satisfechos: Procesamiento confiable de pagos para miles de comercios",
+      "Diversificación del negocio: Habilitación de pagos en línea para nuevos canales de venta",
     ],
   },
   {
@@ -140,60 +125,43 @@ Características Clave:
     scale: "1,000,000 usuarios bancarios",
     metrics: [
       { number: "1M", label: "Usuarios Bancarios" },
-      { number: "60%", label: "Mejora en Performance" },
-      { number: "100%", label: "Aislamiento de Lógica" },
-      { number: "50%", label: "Reducción Tiempo Deploy" },
+      { number: "99.9%", label: "Disponibilidad Operativa del servicio" },
+      { number: "100%", label: "Consulta de Pagos en Línea" },
     ],
     overview:
-      "Sistema de consulta de pagos de cuotas bancarias desarrollado para una entidad financiera. El software permite a los usuarios bancarios consultar el estado de sus pagos de manera rápida y segura.",
+      "Sistema de consulta de pagos de cuotas bancarias desarrollado para una entidad financiera peruana. El software permite a los usuarios bancarios consultar el estado de sus pagos de manera rápida y segura.",
 
     architectureDescription:
-      "Implementé arquitectura hexagonal (puertos y adaptadores):",
+      "Se implementó microservicios con arquitectura hexagonal y Desarrollo Dirigido por Dominio (DDD):",
     architecturePoints: [
       "Aislamiento de lógica de negocio de dependencias externas",
-      "Optimización de consultas SQL Server para carga concurrente",
-      "Base de datos de grafos Neo4j para relaciones complejas",
-      "Patrones DDD y CQRS para separación de responsabilidades",
+      "Escalabilidad independiente para cada servicio según la demanda",
+      "Resiliencia y aislamiento de fallos",
     ],
     components: [
       {
-        title: "Arquitectura Hexagonal",
-        description:
-          "Separación de lógica de negocio mediante puertos y adaptadores, mejorando testabilidad y mantenibilidad.",
-      },
-      {
-        title: "SQL Server Optimizado",
+        title: "SQL Server",
         description:
           "Base de datos relacional con queries optimizados y índices estratégicos para alta concurrencia.",
       },
       {
-        title: "Neo4j Graph Database",
+        title: "Microservicios Node.js",
         description:
-          "Base de datos de grafos para modelar relaciones complejas entre cuentas, transacciones y usuarios.",
+          "Servicios independientes con lógica de negocio aislada y operaciones idempotentes.",
       },
       {
-        title: "Queries Cypher",
+        title: "Docker",
         description:
-          "Queries personalizadas en Cypher para análisis de datos relacionales en tiempo real.",
+          "Contenedores para despliegue y orquestación de microservicios, facilitando escalabilidad y mantenimiento.",
       },
     ],
     techStack: `Backend:
 ├── Node.js
-├── Arquitectura Hexagonal
-├── SQL Server (optimizado)
-└── Neo4j Graph Database
-
-Patrones de Diseño:
-├── Inyección de Dependencias
-├── Repository Pattern
-├── Domain-Driven Design
-└── Principios CQRS`,
+├── SQL Server
+└── Docker`,
     businessImpact: [
-      "Desarrollo independiente de módulos, acelerando entrega de nuevas funcionalidades",
-      "Aplicación bancaria robusta, escalable y fácil de mantener",
-      "Capacidad de soportar crecimiento continuo de usuarios sin rediseño",
-      "Reducción de tiempo de desarrollo de nuevas features en 50%",
-      "Mejora en la calidad del código y reducción de bugs en producción",
+      "Escalabilidad y Mantenibilidad: Aplicación bancaria robusta, escalable y fácil de mantener",
+      "Escalabilidad garantizada: Capacidad de soportar crecimiento continuo de usuarios sin rediseño",
     ],
   },
 ];
