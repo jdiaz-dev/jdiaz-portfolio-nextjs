@@ -11,7 +11,7 @@ export default function Hero() {
         <h2>Ingeniero de Software Backend</h2>
       </div>
       <div className="litle-description">
-        Especialista en sistemas de alto rendimiento para el sector financiero
+        Especialista en sistemas seguros, escalables y de alto rendimiento
       </div>
     </section>
   );
