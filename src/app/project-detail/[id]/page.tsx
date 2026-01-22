@@ -1,7 +1,7 @@
 // app/project-detail/[id]/page.tsx
 import { notFound } from "next/navigation";
 import ProjectDetail from "./ProjectDetail";
-import { projectsData } from "../../../data/ProjectData";
+import { projectsSpanishData } from "../../../data/ProjectData.es";
 import { Project } from "./project.types";
 
 interface ProjectPageProps {
@@ -15,7 +15,7 @@ interface ProjectPageProps {
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { id } = await params;
 
-  const project = projectsData.find((p) => p.id === id);
+  const project = projectsSpanishData.find((p) => p.id === id);
 
   if (!project) {
     notFound();
@@ -26,7 +26,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
 // Replace getStaticPaths with generateStaticParams
 export async function generateStaticParams() {
-  return projectsData.map((project) => ({
+  return projectsSpanishData.map((project) => ({
     id: project.id,
   }));
 }

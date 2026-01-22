@@ -1,7 +1,7 @@
 // data/projects.data.ts
 import { Project } from "../app/project-detail/[id]/project.types";
 
-export const projectsData: Project[] = [
+export const projectsSpanishData: Project[] = [
   {
     id: "payment-conciliator",
     image: "/images/fintech4.png",

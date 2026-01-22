@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState, useEffect, useRef } from "react";
 
 export default function Header() {
@@ -7,6 +8,7 @@ export default function Header() {
   const [isAtTop, setIsAtTop] = useState(true);
   const lastScrollY = useRef(0);
   const headerRef = useRef<HTMLElement>(null);
+  const t = useTranslations();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,13 +69,13 @@ export default function Header() {
     >
       <ul>
         <li className="about" onClick={() => scrollToSection("about-me")}>
-          Acerca de mi
+          {t("header.aboutMe")}
         </li>
         <li className="work" onClick={() => scrollToSection("portfolio")}>
-          Portafolio
+          {t("header.portfolio")}
         </li>
         <li className="contact" onClick={() => scrollToSection("contact-me")}>
-          Contacto
+          {t("header.contact")}
         </li>
       </ul>
     </header>

@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { projectsData } from "../data/ProjectData";
+import { useTranslations } from "next-intl";
+import { Project } from "../app/project-detail/[id]/project.types";
 
 const styles = {
   projects: {
@@ -77,16 +78,21 @@ const styles = {
 } as const;
 
 export default function Projects() {
+  const t = useTranslations();
+  const projects: Project[] = t.raw("portfolio.projects");
+
   return (
     <>
       <section className="portfolio" style={styles.projects}>
         <div className="box-title">
-          <h3 style={{ fontFamily: "Rajdhani-Bold" }}>Portafolio</h3>
+          <h3 style={{ fontFamily: "Rajdhani-Bold" }}>
+            {t("portfolio.title")}
+          </h3>
           <div></div>
         </div>
 
         <div className="container-projects">
-          {projectsData.map((project, index) => {
+          {projects.map((project, index) => {
             const isEven = index % 2 === 0;
 
             return (

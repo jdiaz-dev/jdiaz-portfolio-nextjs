@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import "./globals.scss";
 import "./responsive.scss";
 import Script from "next/script";
-import Header from "@/src/components/Header";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 
 export const metadata: Metadata = {
   title: "Jonathan Díaz - Portfolio",
@@ -10,11 +13,18 @@ export const metadata: Metadata = {
     "Desarrollador de software con enfoque en el producto y funcionalidades",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
+  /* if (!routing.locales.includes(locale as any)) {
+    notFound();
+  } */
+
+  const messages = await getMessages();
   return (
     <html lang="en">
       <head>
@@ -33,7 +43,9 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

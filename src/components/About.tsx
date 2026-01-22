@@ -1,6 +1,9 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function About() {
+  const t = useTranslations();
+
   const technologies = [
     "Node.js",
     "Nest.js",
@@ -13,21 +16,15 @@ export default function About() {
   return (
     <section className="about-me">
       <div className="box-title">
-        <h3>Acerca de mi</h3>
+        <h3> {t("about.aboutMe")}</h3>
         <div></div>
       </div>
       <br />
 
       <div className="container-biography">
         <div className="description">
-          Ingeniero de software backend especializado en Node.js con más de 5
-          años de experiencia construyendo sistemas de alto rendimiento para el
-          sector financiero. He desarrollado soluciones serverless que procesan
-          20 millones de solicitudes mensuales y plataformas que sirven a más
-          de 5 millones de usuarios. Experto en arquitecturas de
-          microservicios, AWS cloud, y bases de datos Relacionales y No Relacionales. Mi enfoque se
-          centra en crear sistemas escalables, seguros y mantenibles que
-          resuelven problemas de negocio reales.
+          {t("about.biography")}
+
           <br />
           <br />
         </div>
@@ -42,12 +39,9 @@ export default function About() {
       </div>
 
       <div className="my-technologies">
-        <p>
-          Aquí están las tecnologías con las que he estado trabajando
-          recientemente:
-        </p>
+        <p>{t("about.recentTechnologies")}</p>
         <ul>
-          {technologies.map((tech, index) => (
+          {(t.raw("about.technologiesList") as unknown as string[]).map((tech, index) => (
             <li key={index}>{tech}</li>
           ))}
         </ul>

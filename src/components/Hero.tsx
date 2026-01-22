@@ -1,18 +1,20 @@
+import { useTranslations } from "next-intl";
+
 export default function Hero() {
+  const t = useTranslations();
+
   return (
     <section className="front">
       <div className="first-sentence">
-        <h2>Hola, mi nombre es</h2>
+        <h2>{t("hero.greeting")}</h2>
       </div>
       <div className="my-name">
-        <h1>Jonathan Díaz</h1>
+        <h1>{t("hero.name")}</h1>
       </div>
       <div className="my-activity">
-        <h2>Ingeniero de Software Backend</h2>
+        <h2>{t("hero.profession")}</h2>
       </div>
-      <div className="litle-description">
-        Especialista en sistemas seguros, escalables y de alto rendimiento
-      </div>
+      <div className="litle-description">{t("hero.description")}</div>
     </section>
   );
 }

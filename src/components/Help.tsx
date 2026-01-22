@@ -9,7 +9,7 @@ export default function Hero() {
           playsInline
           className="background-video"
         >
-          <source src="/videos/hero-background.mp4" type="video/mp4" />
+          <source src="/videos/intro.mp4" type="video/mp4" />
           Tu navegador no soporta videos HTML5.
         </video>
 
