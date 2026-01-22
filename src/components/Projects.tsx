@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
-import { Project } from "../app/project-detail/[id]/project.types";
+import { useLocale, useTranslations } from "next-intl";
+import { Project } from "../app/[locale]/project-detail/[id]/project.types";
 
 const styles = {
   projects: {
@@ -79,6 +79,7 @@ const styles = {
 
 export default function Projects() {
   const t = useTranslations();
+  const locale = useLocale();
   const projects: Project[] = t.raw("portfolio.projects");
 
   return (
@@ -134,7 +135,7 @@ export default function Projects() {
                       }}
                     >
                       <Link
-                        href={`project-detail/${project.id}`}
+                        href={`${locale}/project-detail/${project.id}`}
                         style={{
                           display: "inline-block",
                           padding: "10px 20px",

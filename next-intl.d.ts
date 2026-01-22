@@ -1,5 +1,5 @@
 import "i18next";
-import { Project } from "./src/app/project-detail/[id]/project.types";
+import { Project } from "./src/app/[locale]/project-detail/[id]/project.types";
 
 declare global {
   interface CustomTypeOptions {

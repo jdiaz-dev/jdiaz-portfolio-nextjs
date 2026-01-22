@@ -1,5 +1,5 @@
 // data/projects.data.ts
-import { Project } from "../app/project-detail/[id]/project.types";
+import { Project } from "../app/[locale]/project-detail/[id]/project.types";
 
 export const projectsEnglishData: Project[] = [
   {
