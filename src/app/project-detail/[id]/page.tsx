@@ -1,7 +1,7 @@
 // app/project-detail/[id]/page.tsx
 import { notFound } from "next/navigation";
 import ProjectDetail from "./ProjectDetail";
-import { projectsData } from "./ProjectData";
+import { projectsData } from "../../../data/ProjectData";
 import { Project } from "./project.types";
 
 interface ProjectPageProps {

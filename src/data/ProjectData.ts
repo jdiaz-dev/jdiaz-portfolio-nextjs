@@ -1,9 +1,10 @@
 // data/projects.data.ts
-import { Project } from "./project.types";
+import { Project } from "../app/project-detail/[id]/project.types";
 
 export const projectsData: Project[] = [
   {
     id: "payment-conciliator",
+    image: "/images/fintech4.png",
     title: "Conciliador de Pagos en Tiempo Real",
     company: "Confidencial",
     industry: "Servicios Financieros (Banca)",
@@ -16,6 +17,7 @@ export const projectsData: Project[] = [
     ],
     overview:
       "Sistema de conciliación de pagos serverless de alto rendimiento desarrollado para un importante banco argentino con más de 6 millones de usuarios activos. El sistema procesa transacciones en tiempo real, garantizando la conciliación precisa de millones de operaciones mensuales.",
+    technologies: ["AWS", "Node.js", "OpenSearch"],
     architectureDescription:
       "Se implementó una arquitectura completamente serverless utilizando los servicios nativos de AWS, lo que permitió:",
     architecturePoints: [
@@ -72,6 +74,7 @@ Seguridad:
   },
   {
     id: "payment-gateway",
+    image: "/images/fintech3.webp",
     company: "Confidencial",
     title: "Proveedor de Pasarela de Pagos",
     industry: "Fintech / Procesamiento de Pagos",
@@ -83,7 +86,7 @@ Seguridad:
     ],
     overview:
       "Sistema de manejo de transacciones distribuidas provenientes de dispositivos POS y links de pago desarrollado para una pasarela de pagos peruana. El sistema administra y procesa pagos de forma segura garantizando las operaciones de 5500 comercios afiliados.",
-
+    technologies: ["Node.js", "MySQL", "MongoDB", "Docker"],
     architectureDescription:
       "Se implementó una arquitectura de microservicios en Node.js basada en eventos y HTTP lo que permitió:",
     architecturePoints: [
@@ -119,6 +122,7 @@ Seguridad:
   },
   {
     id: "loan-payment-consultant",
+    image: "/images/fintech2.jpg",
     title: "Plataforma de Microservicios Bancarios de Alto Rendimiento",
     company: "Confidencial",
     industry: "Banca Digital / Servicios Financieros",
@@ -130,7 +134,7 @@ Seguridad:
     ],
     overview:
       "Sistema de consulta de pagos de cuotas bancarias desarrollado para una entidad financiera peruana. El software permite a los usuarios bancarios consultar el estado de sus pagos de manera rápida y segura.",
-
+    technologies: ["Node.js", "Azure", "SQL Server"],
     architectureDescription:
       "Se implementó microservicios con arquitectura hexagonal y Desarrollo Dirigido por Dominio (DDD):",
     architecturePoints: [

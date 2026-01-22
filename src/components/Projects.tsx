@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { projects } from "../data/projects";
 import Link from "next/link";
+import { projectsData } from "../data/ProjectData";
 
 const styles = {
   projects: {
@@ -86,7 +86,7 @@ export default function Projects() {
         </div>
 
         <div className="container-projects">
-          {projects.map((project, index) => {
+          {projectsData.map((project, index) => {
             const isEven = index % 2 === 0;
 
             return (
@@ -120,7 +120,7 @@ export default function Projects() {
                       ...(isEven ? {} : styles.descriptionDetailRight),
                     }}
                   >
-                    {project.description}
+                    {project.overview}
                     <div
                       style={{
                         marginTop: "20px",
@@ -128,7 +128,7 @@ export default function Projects() {
                       }}
                     >
                       <Link
-                        href={project.detailUrl}
+                        href={`project-detail/${project.id}`}
                         style={{
                           display: "inline-block",
                           padding: "10px 20px",

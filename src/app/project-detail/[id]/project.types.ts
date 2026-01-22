@@ -12,9 +12,11 @@ export interface TechComponent {
 
 export interface Project {
   id: string;
+  image: string;
   title: string;
   metrics: Metric[];
   overview: string;
+  technologies: string[];
   architectureDescription: string;
   architecturePoints: string[];
   components: TechComponent[];
