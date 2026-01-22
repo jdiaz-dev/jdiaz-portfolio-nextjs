@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useState, useEffect, useRef } from "react";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
@@ -9,6 +10,8 @@ export default function Header() {
   const lastScrollY = useRef(0);
   const headerRef = useRef<HTMLElement>(null);
   const t = useTranslations();
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,25 +62,91 @@ export default function Header() {
     }
   };
 
+  const changeLanguage = (locale: string) => {
+    // Obtener la ruta actual sin el locale
+    const segments = pathname.split("/");
+    segments[1] = locale; // Reemplazar el locale
+    const newPath = segments.join("/");
+
+    router.push(newPath);
+  };
+
   return (
-    <header
-      ref={headerRef}
-      className={`
+    <>
+      <header
+        ref={headerRef}
+        className={`
         ${isVisible ? "header-visible" : "header-hidden"}
         ${isAtTop ? "header-at-top" : "header-scrolled"}
       `}
-    >
-      <ul>
-        <li className="about" onClick={() => scrollToSection("about-me")}>
-          {t("header.aboutMe")}
-        </li>
-        <li className="work" onClick={() => scrollToSection("portfolio")}>
-          {t("header.portfolio")}
-        </li>
-        <li className="contact" onClick={() => scrollToSection("contact-me")}>
-          {t("header.contact")}
-        </li>
-      </ul>
-    </header>
+      >
+        <ul>
+          <li className="about" onClick={() => scrollToSection("about-me")}>
+            {t("header.aboutMe")}
+          </li>
+          <li className="work" onClick={() => scrollToSection("portfolio")}>
+            {t("header.portfolio")}
+          </li>
+          <li className="contact" onClick={() => scrollToSection("contact-me")}>
+            {t("header.contact")}
+          </li>
+          <li className="language-switcher">
+            <button
+              onClick={() => changeLanguage("en")}
+              aria-label="Change to English"
+              className="flag-button"
+            >
+              🇺🇸
+            </button>
+            <button
+              onClick={() => changeLanguage("es")}
+              aria-label="Cambiar a Español"
+              className="flag-button"
+            >
+              🇵🇪
+            </button>
+          </li>
+        </ul>
+      </header>
+      <style jsx>
+        {`
+          /* Add these styles to your existing header styles */
+
+          .language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          }
+
+          .flag-button {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem;
+            transition:
+              transform 0.2s ease,
+              opacity 0.2s ease;
+            opacity: 0.8;
+          }
+
+          .flag-button:hover {
+            transform: scale(1.2);
+            opacity: 1;
+          }
+
+          .flag-button:active {
+            transform: scale(1.1);
+          }
+
+          /* Optional: Add a subtle border or background on hover */
+          .flag-button:focus {
+            outline: 2px solid currentColor;
+            outline-offset: 2px;
+            border-radius: 4px;
+          }
+        `}
+      </style>
+    </>
   );
 }
