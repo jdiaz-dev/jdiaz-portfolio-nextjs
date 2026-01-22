@@ -85,9 +85,8 @@ export default function Header() {
   };
 
   const changeLanguage = (locale: string) => {
-    // Obtener la ruta actual sin el locale
     const segments = pathname.split("/");
-    segments[1] = locale; // Reemplazar el locale
+    segments[1] = locale;
     const newPath = segments.join("/");
 
     router.push(newPath);

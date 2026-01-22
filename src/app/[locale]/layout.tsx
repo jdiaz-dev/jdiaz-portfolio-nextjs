@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.scss";
-import "./responsive.scss";
+import "../globals.scss";
+import "../responsive.scss";
 import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Jonathan Díaz - Portfolio",
@@ -12,25 +11,21 @@ export const metadata: Metadata = {
     "Desarrollador de software con enfoque en el producto y funcionalidades",
 };
 
-const locales = ["en", "es"];
-
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return [{ locale: "en" }, { locale: "es" }];
 }
 
 export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  /* if (!locales.includes(locale)) {
-    notFound();
-  } */
-
-  const messages = await getMessages();
-
+  const { locale } = await params;
+  const messages = await getMessages({ locale });
+  console.log("-------------locale", locale);
+  console.log("-------------messages", messages);
   return (
     <html lang={locale}>
       <head>
@@ -49,7 +44,7 @@ export default async function RootLayout({
         />
       </head>
       <body>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
       </body>

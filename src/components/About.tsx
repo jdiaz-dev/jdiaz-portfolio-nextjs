@@ -1,17 +1,10 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function About() {
   const t = useTranslations();
-
-  const technologies = [
-    "Node.js",
-    "Nest.js",
-    "MongoDB",
-    "PostgreSQL",
-    "Cloudflare",
-    "AWS",
-  ];
 
   return (
     <section className="about-me">
@@ -41,9 +34,11 @@ export default function About() {
       <div className="my-technologies">
         <p>{t("about.recentTechnologies")}</p>
         <ul>
-          {(t.raw("about.technologiesList") as unknown as string[]).map((tech, index) => (
-            <li key={index}>{tech}</li>
-          ))}
+          {(t.raw("about.technologiesList") as unknown as string[]).map(
+            (tech, index) => (
+              <li key={index}>{tech}</li>
+            ),
+          )}
         </ul>
       </div>
     </section>
