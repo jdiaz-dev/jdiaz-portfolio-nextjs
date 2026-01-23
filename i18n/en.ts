@@ -5,6 +5,10 @@ export default {
     aboutMe: "About Me",
     portfolio: "Portfolio",
     contact: "Contact",
+    supportedLanguages: {
+      english: "English",
+      spanish: "Spanish",
+    },
   },
   hero: {
     greeting: "Hi, my name is",

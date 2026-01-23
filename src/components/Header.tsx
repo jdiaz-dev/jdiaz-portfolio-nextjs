@@ -122,7 +122,9 @@ export default function Header() {
                 {currentLocale === "es" ? "🇵🇪" : "🇺🇸"}
               </span>
               <span className="language-name">
-                {currentLocale === "es" ? "Español" : "English"}
+                {currentLocale === "es"
+                  ? t("header.supportedLanguages.spanish")
+                  : t("header.supportedLanguages.english")}
               </span>
               <span className="dropdown-arrow">
                 {isLanguageOpen ? "▲" : "▼"}
@@ -135,14 +137,14 @@ export default function Header() {
                   onClick={() => changeLanguage("en")}
                 >
                   <span className="flag">🇺🇸</span>
-                  <span>English</span>
+                  <span>{t("header.supportedLanguages.english")}</span>
                 </button>
                 <button
                   className="language-option"
                   onClick={() => changeLanguage("es")}
                 >
                   <span className="flag">🇵🇪</span>
-                  <span>Español</span>
+                  <span>{t("header.supportedLanguages.spanish")}</span>
                 </button>
               </div>
             )}
@@ -151,6 +153,47 @@ export default function Header() {
       </header>
       <style jsx>
         {`
+          header {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: flex-end;
+            background-color: #0b1c35;
+
+            box-shadow: 0 10px 40px -10px #051530;
+            position: fixed;
+            z-index: 2;
+            transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transform: translateY(0px);
+            left: 0;
+            top: 0;
+          }
+          header:hover {
+            visibility: visible;
+          }
+          ul {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            list-style: none;
+            margin-right: 5px;
+          }
+          li {
+            flex-basis: 25%;
+            margin: 5px;
+            padding: 10px;
+            background-color: rgb(2, 14, 26);
+            color: rgb(212, 202, 202);
+            text-align: center;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          li:hover {
+            background-color: rgb(3, 7, 10);
+          }
+
           /* Language Switcher Dropdown Styles */
 
           .language-switcher {
@@ -163,7 +206,7 @@ export default function Header() {
             background: none;
             border: none;
             cursor: pointer;
-            padding: 0.5rem 0.75rem;
+            padding-left: 12%;
             transition: opacity 0.2s ease;
             opacity: 0.9;
             display: flex;
