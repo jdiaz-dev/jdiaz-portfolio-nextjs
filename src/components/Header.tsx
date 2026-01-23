@@ -10,7 +10,7 @@ export default function Header() {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const lastScrollY = useRef(0);
   const headerRef = useRef<HTMLElement>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLLIElement>(null);
   const t = useTranslations();
   const router = useRouter();
   const pathname = usePathname();
