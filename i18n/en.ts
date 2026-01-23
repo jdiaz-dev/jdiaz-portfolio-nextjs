@@ -18,7 +18,7 @@ export default {
   },
   about: {
     aboutMe: "About Me",
-    biography: `Backend software engineer specialized in Node.js with more than 5
+    biography: `Peruvian backend software engineer specialized in Node.js with more than 5
           years of experience building high-performance systems for the
           financial sector. I have developed serverless solutions that process
           20 million requests per month and platforms that serve more than

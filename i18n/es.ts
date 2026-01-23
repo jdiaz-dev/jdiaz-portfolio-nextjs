@@ -19,7 +19,7 @@ export default {
   },
   about: {
     aboutMe: "Acerca de mi",
-    biography: `Ingeniero de software backend especializado en Node.js con más de 5
+    biography: `Ingeniero de software backend peruano especializado en Node.js con más de 5
           años de experiencia construyendo sistemas de alto rendimiento para el
           sector financiero. He desarrollado soluciones serverless que procesan
           20 millones de solicitudes mensuales y plataformas que sirven a más
