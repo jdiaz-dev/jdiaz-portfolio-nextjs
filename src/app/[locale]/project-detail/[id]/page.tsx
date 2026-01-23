@@ -7,15 +7,16 @@ import { Project } from "./project.types";
 interface ProjectPageProps {
   params: Promise<{
     id: string;
+    locale: string;
   }>;
 }
 
-// Remove getStaticProps completely!
-// This is a Server Component - it fetches data directly
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const { id } = await params;
-
-  const project = projectsSpanishData.find((p) => p.id === id);
+  const { id, locale } = await params;
+  const importedData: any = (await import(`../../../../../i18n/${locale}.ts`))
+    .default;
+  const projectData: Project[] = importedData.portfolio.projects;
+  const project = projectData.find((p) => p.id === id);
 
   if (!project) {
     notFound();
@@ -24,7 +25,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return <ProjectDetail project={project} />;
 }
 
-// Replace getStaticPaths with generateStaticParams
 export async function generateStaticParams() {
   return projectsSpanishData.map((project) => ({
     id: project.id,

@@ -34,6 +34,18 @@ export default {
   portfolio: {
     title: "Portafolio de Proyectos",
     projects: projectsSpanishData,
+    readMoreButton: "Leer Más",
+    projectDetail: {
+      company: "Empresa",
+      industry: "Industria",
+      scale: "Escala",
+      bussinesMetricsTitle: "Métricas del Negocio",
+      implementedSolutionTitle: "Solución Implementada",
+      architectureTitle: "Arquitectura",
+      mainComponentsTitle: "Componentes Principales",
+      usedTechnologiesTitle: "Tecnologías Utilizadas",
+      bussinesImpactTitle: "Impacto en el Negocio",
+    },
   },
   contact: {
     messageContactMe: "Tienes un proyecto en mente. Estaré encantado de oírte.",

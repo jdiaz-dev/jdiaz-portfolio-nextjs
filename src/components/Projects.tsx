@@ -146,7 +146,7 @@ export default function Projects() {
                           fontWeight: "bold",
                         }}
                       >
-                        Leer más
+                        {t("portfolio.readMoreButton")}
                       </Link>
                     </div>
                   </div>

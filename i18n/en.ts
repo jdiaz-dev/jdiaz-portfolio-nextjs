@@ -33,6 +33,18 @@ export default {
   portfolio: {
     title: "Project Portfolio",
     projects: projectsEnglishData,
+    readMoreButton: "Read More",
+    projectDetail: {
+      company: "Company",
+      industry: "Industry",
+      scale: "Scale",
+      bussinesMetricsTitle: "Business Metrics",
+      implementedSolutionTitle: "Implemented Solution",
+      architectureTitle: "Architecture",
+      mainComponentsTitle: "Main Components",
+      usedTechnologiesTitle: "Used Technologies",
+      bussinesImpactTitle: "Business Impact",
+    },
   },
   contact: {
     messageContactMe:
