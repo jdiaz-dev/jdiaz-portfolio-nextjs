@@ -10,8 +10,8 @@ export const projectsSpanishData: Project[] = [
     industry: "Servicios Financieros (Banca)",
     scale: "6M+ usuarios, 20M solicitudes mensuales",
     metrics: [
-      { number: "600 mil", label: "Transacciones conciliadas" },
-      { number: "20 millones", label: "Solicitudes mensuales" },
+      { number: "+700 mil", label: "Transacciones conciliadas por mes" },
+      { number: "+20 millones", label: "Solicitudes mensuales" },
       { number: "99.9%", label: "Disponibilidad Operativa del servicio" },
       { number: "99%", label: "Reducción del Tiempo Manual de Conciliación" },
     ],
@@ -24,7 +24,7 @@ export const projectsSpanishData: Project[] = [
       "Escalamiento automático basado en demanda",
       "Costos optimizados (pago por uso)",
       "Alta disponibilidad sin gestión de servidores",
-      "Despliegue rápido mediante Infrastructure as Code",
+      "Despliegue rápido mediante Infrastructura como Código",
     ],
     components: [
       {
@@ -65,7 +65,7 @@ Seguridad:
 ├── AWS IAM Roles & Policies
 └── VPC & Security Groups`,
     businessImpact: [
-      "Usuarios satisfechos: Conciliación instantánea de pagos permitió abonar el dinero de forma más rápida a comercios asociados",
+      "Usuarios satisfechos: Conciliación instantánea de pagos que permitió a comercios asociados recibir sus fondos más rápido",
       "Reducción de costos operativos: Automatización del 99% de tareas manuales de conciliación",
       "Escalabilidad garantizada: Sistema preparado para crecer junto con el negocio sin rediseño de arquitectura",
       "Confiabilidad: 99.9% de disponibilidad para operaciones críticas del negocio",

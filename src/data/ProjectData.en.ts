@@ -10,8 +10,8 @@ export const projectsEnglishData: Project[] = [
     industry: "Financial Services (Banking)",
     scale: "6M+ users, 20M monthly requests",
     metrics: [
-      { number: "600K", label: "Reconciled Transactions" },
-      { number: "20 million", label: "Monthly Requests" },
+      { number: "700K+", label: "Reconciled Transactions Monthly" },
+      { number: "20M+", label: "Monthly Requests" },
       { number: "99.9%", label: "Service Operational Availability" },
       { number: "99%", label: "Manual Reconciliation Time Reduction" },
     ],
@@ -65,7 +65,7 @@ Security:
 ├── AWS IAM Roles & Policies
 └── VPC & Security Groups`,
     businessImpact: [
-      "Satisfied users: Instant payment reconciliation enabled faster money disbursement to affiliated merchants",
+      "Satisfied users: Instant payment reconciliation that allowed partner businesses to receive their funds faster",
       "Operational cost reduction: 99% automation of manual reconciliation tasks",
       "Guaranteed scalability: System prepared to grow with the business without architecture redesign",
       "Reliability: 99.9% availability for critical business operations",
