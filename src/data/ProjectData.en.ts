@@ -5,7 +5,7 @@ export const projectsEnglishData: Project[] = [
   {
     id: "payment-conciliator",
     image: "/images/fintech4.png",
-    title: "Real-Time Payment Reconciliation System",
+    title: "Real Time Payment Reconciliation System",
     company: "Confidential",
     industry: "Financial Services (Banking)",
     scale: "6M+ users, 20M monthly requests",
@@ -16,13 +16,13 @@ export const projectsEnglishData: Project[] = [
       { number: "99%", label: "Manual Reconciliation Time Reduction" },
     ],
     overview:
-      "High-performance serverless payment reconciliation system developed for a major Argentine bank with over 6 million active users. The system processes transactions in real-time, ensuring accurate reconciliation of millions of monthly operations.",
+      "High performance serverless payment reconciliation system developed for a major Argentine bank with over 6 million active users. The system processes transactions in real time, ensuring accurate reconciliation of millions of monthly operations.",
     technologies: ["AWS", "Node.js", "OpenSearch"],
     architectureDescription:
       "A fully serverless architecture was implemented using AWS native services, which enabled:",
     architecturePoints: [
       "Automatic scaling based on demand",
-      "Optimized costs (pay-per-use)",
+      "Optimized costs (pay per use)",
       "High availability without server management",
       "Rapid deployment through Infrastructure as Code",
     ],
@@ -30,7 +30,7 @@ export const projectsEnglishData: Project[] = [
       {
         title: "AWS OpenSearch",
         description:
-          "Real-time search and reconciliation engine. Enabled complex searches across millions of transactions in milliseconds.",
+          "Real time search and reconciliation engine. Enabled complex searches across millions of transactions in milliseconds.",
       },
       {
         title: "AWS Lambda",
@@ -40,7 +40,7 @@ export const projectsEnglishData: Project[] = [
       {
         title: "AWS StepFunctions",
         description:
-          "Complex workflow orchestration. Coordination of multiple Lambdas for multi-step reconciliation processes.",
+          "Complex workflow orchestration. Coordination of multiple Lambdas for multi step reconciliation processes.",
       },
       {
         title: "SQS/SNS",
@@ -69,7 +69,7 @@ Security:
       "Operational cost reduction: 99% automation of manual reconciliation tasks",
       "Guaranteed scalability: System prepared to grow with the business without architecture redesign",
       "Reliability: 99.9% availability for critical business operations",
-      "Visibility: Real-time metrics and dashboards for data-driven decision making",
+      "Visibility: Real time metrics and dashboards for data driven decision making",
     ],
   },
   {
@@ -88,7 +88,7 @@ Security:
       "Distributed transaction management system for POS devices and payment links developed for a Peruvian payment gateway. The system securely manages and processes payments, guaranteeing operations for 5,500 affiliated merchants.",
     technologies: ["Node.js", "MySQL", "MongoDB", "Docker"],
     architectureDescription:
-      "An event-driven and HTTP-based Node.js microservices architecture was implemented, which enabled:",
+      "An event driven and HTTP based Node.js microservices architecture was implemented, which enabled:",
     architecturePoints: [
       "Service decoupling for greater resilience",
       "Independent scalability for each service based on demand",
@@ -123,7 +123,7 @@ Security:
   {
     id: "loan-payment-consultant",
     image: "/images/fintech2.jpg",
-    title: "High-Performance Banking Microservices Platform",
+    title: "High Performance Banking Microservices Platform",
     company: "Confidential",
     industry: "Digital Banking / Financial Services",
     scale: "1,000,000 banking users",
@@ -136,7 +136,7 @@ Security:
       "Loan payment inquiry system developed for a Peruvian financial institution. The software enables banking users to check their payment status quickly and securely.",
     technologies: ["Node.js", "Azure", "SQL Server"],
     architectureDescription:
-      "Microservices with hexagonal architecture and Domain-Driven Design (DDD) were implemented:",
+      "Microservices with hexagonal architecture and Domain Driven Design (DDD) were implemented:",
     architecturePoints: [
       "Business logic isolation from external dependencies",
       "Independent scalability for each service based on demand",
@@ -164,7 +164,7 @@ Security:
 ├── SQL Server
 └── Docker`,
     businessImpact: [
-      "Scalability and Maintainability: Robust, scalable, and easy-to-maintain banking application",
+      "Scalability and Maintainability: Robust, scalable, and easy to maintain banking application",
       "Guaranteed scalability: Capacity to support continuous user growth without redesign",
     ],
   },
