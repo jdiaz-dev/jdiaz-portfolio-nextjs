@@ -173,6 +173,7 @@ export default function Header() {
           }
           ul {
             width: 50%;
+            border: 1px solid red;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
@@ -311,6 +312,17 @@ export default function Header() {
 
             .language-option:active {
               background-color: #4a4a4a;
+            }
+          }
+
+          @media (max-width: 1050px) {
+            ul {
+              width: 70%;
+            }
+          }
+          @media (max-width: 730px) {
+            ul {
+              width: 100%;
             }
           }
         `}
