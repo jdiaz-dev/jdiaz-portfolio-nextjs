@@ -173,7 +173,6 @@ export default function Header() {
           }
           ul {
             width: 50%;
-            border: 1px solid red;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
