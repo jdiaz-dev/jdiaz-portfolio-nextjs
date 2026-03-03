@@ -13,6 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
@@ -25,6 +26,8 @@ export default function Header() {
   const router = useRouter();
   const pathname = usePathname();
   const currentLocale = pathname.split("/")[1] || "en";
+
+  const githubUrl = "https://github.com/jdiaz-dev";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -124,6 +127,27 @@ export default function Header() {
             </Button>
           ))}
 
+          {/* Desktop GitHub Link */}
+          <Button
+            component="a"
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              color: "rgb(212, 202, 202)",
+              backgroundColor: "rgb(2, 14, 26)",
+              borderRadius: "4px",
+              px: 2,
+              textTransform: "none",
+              fontSize: "0.95rem",
+              gap: 0.75,
+              "&:hover": { backgroundColor: "rgb(3, 7, 10)" },
+            }}
+          >
+            <GitHubIcon sx={{ fontSize: "1.2rem" }} />
+            GitHub
+          </Button>
+
           {/* Desktop Language Switcher */}
           <Button
             onClick={(e) => {
@@ -204,6 +228,18 @@ export default function Header() {
                 <Typography>{item.label}</Typography>
               </MenuItem>
             ))}
+            <Divider sx={{ borderColor: "rgba(212,202,202,0.15)", my: 0.5 }} />
+            {/* Mobile GitHub Link */}
+            <MenuItem
+              component="a"
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ gap: 1.5, "&:hover": { backgroundColor: "rgb(3, 7, 10)" } }}
+            >
+              <GitHubIcon sx={{ fontSize: "1.25rem" }} />
+              <Typography>GitHub</Typography>
+            </MenuItem>
             <Divider sx={{ borderColor: "rgba(212,202,202,0.15)", my: 0.5 }} />
             <MenuItem
               onClick={() => changeLanguage("en")}
