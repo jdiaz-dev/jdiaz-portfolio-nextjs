@@ -1,9 +1,12 @@
+//it is a server component
+
 import type { Metadata } from "next";
 import "../globals.scss";
 import "../responsive.scss";
 import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import Providers from "./providers";
 
 export const metadata: Metadata = {
   title: "Jonathan Díaz - Portfolio",
@@ -44,7 +47,7 @@ export default async function RootLayout({
       </head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <Providers>{children}</Providers>
         </NextIntlClientProvider>
       </body>
     </html>

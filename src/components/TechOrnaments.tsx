@@ -1,4 +1,42 @@
-export default function TechOrnamentsRight() {
+"use client";
+import { makeStyles } from "tss-react/mui";
+
+const styles = makeStyles()(() => {
+  return {
+    verticalOrnament: {
+      height: "50%",
+      borderLeft: "1px solid rgb(212, 202, 202)",
+      margin: "0 auto",
+    },
+  };
+});
+
+function TechOrnamentsLeft() {
+  const { classes } = styles();
+  return (
+    <div className="ornament ornament-left">
+      <ul className="tech-icons">
+        <li>
+          <i className="fab fa-aws"></i>
+        </li>
+        <li>
+          <i className="fab fa-node-js"></i>
+        </li>
+        <li>
+          <i className="fab fa-js"></i>
+        </li>
+        <li>
+          <i className="fab fa-cloudflare"></i>
+        </li>
+      </ul>
+      <div className={classes.verticalOrnament}></div>
+    </div>
+  );
+}
+
+function TechOrnamentsRight() {
+  const { classes } = styles();
+
   return (
     <div className="ornament ornament-right">
       <ul className="tech-icons">
@@ -48,7 +86,18 @@ export default function TechOrnamentsRight() {
           </svg>
         </li>
       </ul>
-      <div className="vertical-ornament"></div>
+      <div className={classes.verticalOrnament}></div>
     </div>
   );
 }
+
+function TechOrnaments() {
+  return (
+    <div>
+      <TechOrnamentsLeft />
+      <TechOrnamentsRight />
+    </div>
+  );
+}
+
+export default TechOrnaments;
