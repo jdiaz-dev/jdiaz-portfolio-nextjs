@@ -18,8 +18,8 @@ export default function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const [isAtTop, setIsAtTop] = useState(true);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const [anchorElNav, setAnchorElNav] = useState(null);
-  const [anchorElLang, setAnchorElLang] = useState(null);
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
+  const [anchorElLang, setAnchorElLang] = useState<null | HTMLElement>(null);
   const lastScrollY = useRef(0);
   const t = useTranslations();
   const router = useRouter();
@@ -60,7 +60,7 @@ export default function Header() {
     };
   }, []);
 
-  const scrollToSection = (sectionClass) => {
+  const scrollToSection = (sectionClass: string) => {
     const section = document.querySelector(sectionClass);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
@@ -71,7 +71,7 @@ export default function Header() {
     setAnchorElNav(null);
   };
 
-  const changeLanguage = (locale) => {
+  const changeLanguage = (locale: string) => {
     const segments = pathname.split("/");
     segments[1] = locale;
     router.push(segments.join("/"));
