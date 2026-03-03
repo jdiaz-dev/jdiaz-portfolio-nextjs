@@ -3,31 +3,52 @@ import { makeStyles } from "tss-react/mui";
 
 const styles = makeStyles()(() => {
   return {
+    ornament: {
+      height: "100vh",
+      display: "flex",
+      flexDirection: "column",
+      paddingTop: "24%",
+    },
     verticalOrnament: {
       height: "50%",
       borderLeft: "1px solid rgb(212, 202, 202)",
       margin: "0 auto",
+    },
+    techIcons: {
+      listStyle: "none",
+      textAlign: "center",
+    },
+    techIconItem: {
+      fontSize: "150%",
+      marginBottom: "11px",
     },
   };
 });
 
 function TechOrnamentsLeft() {
   const { classes } = styles();
+
+  const icons = [
+    "fab fa-aws",
+    "fab fa-node-js",
+    "fab fa-js",
+    "fab fa-cloudflare",
+  ];
   return (
-    <div className="ornament ornament-left">
-      <ul className="tech-icons">
-        <li>
-          <i className="fab fa-aws"></i>
-        </li>
-        <li>
-          <i className="fab fa-node-js"></i>
-        </li>
-        <li>
-          <i className="fab fa-js"></i>
-        </li>
-        <li>
-          <i className="fab fa-cloudflare"></i>
-        </li>
+    <div
+      className={classes.ornament}
+      style={{
+        position: "fixed",
+        top: "0px",
+        left: "5%",
+      }}
+    >
+      <ul className={classes.techIcons}>
+        {icons.map((icon, index) => (
+          <li key={index} className={classes.techIconItem}>
+            <i className={icon}></i>
+          </li>
+        ))}
       </ul>
       <div className={classes.verticalOrnament}></div>
     </div>
@@ -36,23 +57,28 @@ function TechOrnamentsLeft() {
 
 function TechOrnamentsRight() {
   const { classes } = styles();
-
+  const icons = [
+    "fab fa-git",
+    "fab fa-gitlab",
+    "fas fa-database",
+    "fab fa-git-alt",
+  ];
   return (
-    <div className="ornament ornament-right">
-      <ul className="tech-icons">
-        <li>
-          <i className="fab fa-git"></i>
-        </li>
-        <li>
-          <i className="fab fa-gitlab"></i>
-        </li>
-        <li>
-          <i className="fas fa-database"></i>
-        </li>
-
-        <li>
-          <i className="fab fa-git-alt"></i>
-        </li>
+    <div
+      className={classes.ornament}
+      style={{
+        position: "fixed",
+        right: "5%",
+        display: "flex",
+        paddingTop: "19%",
+      }}
+    >
+      <ul className={classes.techIcons}>
+        {icons.map((icon, index) => (
+          <li key={index} className={classes.techIconItem}>
+            <i className={icon}></i>
+          </li>
+        ))}
         <li>
           <svg
             xmlns="http://www.w3.org/2000/svg"
