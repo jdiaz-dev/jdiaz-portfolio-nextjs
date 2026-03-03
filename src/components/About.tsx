@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+import CardMedia from "@mui/material/CardMedia";
 
 export default function About() {
   const t = useTranslations();
@@ -21,12 +21,25 @@ export default function About() {
           <br />
           <br />
         </div>
-        <div className="image">
-          <Image
-            src="/images/jonathan alejandro.png"
+        <div
+          className="image"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <CardMedia
+            component="img"
+            image="/images/jonathan alejandro.png"
             alt="Jonathan Díaz"
-            width={300}
-            height={300}
+            sx={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+            }}
           />
         </div>
       </div>
