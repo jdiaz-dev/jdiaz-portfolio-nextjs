@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { Project } from "../app/[locale]/project-detail/[id]/project.types";
+import CardMedia from "@mui/material/CardMedia";
 
 const styles = {
   projects: {
@@ -106,12 +107,14 @@ export default function Projects() {
                 }}
               >
                 <div style={styles.imageContainer}>
-                  <Image
-                    src={project.image}
+                  <CardMedia
+                    component="img"
+                    image={project.image}
                     alt={project.title}
-                    width={600}
-                    height={400}
-                    style={styles.image}
+                    sx={{
+                      width: "100%",
+                      height: "100%",
+                    }}
                   />
                 </div>
                 <div
