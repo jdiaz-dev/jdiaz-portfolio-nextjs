@@ -48,28 +48,7 @@ body {
     justify-content: center;
   }
 }
-.content {
-  section.front {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
 
-    div.first-sentence h2 {
-      font-size: 200%;
-      color: rgba(67, 136, 201, 0.808);
-    }
-    div.my-name h1 {
-      font-size: 550%;
-      color: rgb(15, 158, 158);
-    }
-    div.my-activity h2 {
-      font-size: 400%;
-    }
-    div.litle-description {
-      font-size: 150%;
-    }
-  }
-}
 .content {
   section {
     div.box-title {

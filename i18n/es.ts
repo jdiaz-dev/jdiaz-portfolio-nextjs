@@ -1,4 +1,4 @@
-import { projectsSpanishData } from "@data/ProjectData.es";
+import { projectsSpanishData } from "@/src/data/ProjectData.es";
 
 export default {
   header: {

@@ -1,5 +1,4 @@
 //it is a server component
-
 import type { Metadata } from "next";
 import "../globals.scss";
 import "../responsive.scss";

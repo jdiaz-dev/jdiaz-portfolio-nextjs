@@ -1,21 +1,23 @@
 "use client";
 
-import Hero from "@components/Hero";
-import About from "@components/About";
-import Projects from "@components/Projects";
-import Contact from "@components/Contact";
-import Footer from "@components/Footer";
-import TechOrnaments from "@components/TechOrnaments";
-import Header from "@components/Header";
+import About from "@/src/components/About";
+import Contact from "@/src/components/Contact";
+import Footer from "@/src/components/Footer";
+import Header from "@/src/components/Header";
+import Hero from "@/src/components/Hero";
+import Projects from "@/src/components/Projects";
+import TechOrnaments from "@/src/components/TechOrnaments";
+import VideoBackground from "@/src/components/VideoBackground";
 
 export default function Home() {
   return (
     <>
+      <VideoBackground />
       <Header />
 
       <TechOrnaments />
+      <Hero />
       <div className="content">
-        <Hero />
         <About />
         <Projects />
         <Contact />
