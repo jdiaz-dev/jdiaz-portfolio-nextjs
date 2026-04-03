@@ -16,8 +16,8 @@ export default function Home() {
       <Header />
 
       <TechOrnaments />
-      <Hero />
       <div className="content">
+        <Hero />
         <About />
         <Projects />
         <Contact />
