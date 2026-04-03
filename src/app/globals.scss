@@ -65,31 +65,7 @@ body {
       }
     }
   }
-  section.about-me {
-    font-size: 120%;
-    .box-title {
-      h3 {
-        font-family: "Rajdhani-Bold";
-      }
-    }
-
-    div.container-biography {
-      display: flex;
-      flex-flow: row;
-      justify-content: space-between;
-
-      div.description {
-        flex-basis: 50%;
-      }
-      div.image {
-        flex-basis: 50%;
-        text-align: center;
-        img {
-          width: 60%;
-        }
-      }
-    }
-  }
+  
   div.my-technologies {
     width: 50%;
 

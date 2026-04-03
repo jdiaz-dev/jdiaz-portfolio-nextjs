@@ -22,9 +22,8 @@ export default function Hero() {
 
       <style jsx>{`
         .front {
-          position: relative;
           width: 100%;
-          min-height: 100vh;
+          min-height: 70vh;
           display: flex;
           align-items: center;
           justify-content: center;
