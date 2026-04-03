@@ -98,7 +98,7 @@ export default function Header() {
     <AppBar
       position="fixed"
       sx={{
-        backgroundColor: "transparent",
+        backgroundColor: "#0b1c35",
         boxShadow: "0 10px 40px -10px #051530",
         transform: isVisible ? "translateY(0)" : "translateY(-100%)",
         transition: "all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)",
