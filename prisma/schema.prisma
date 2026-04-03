@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model WorkStreamAudit {
+  id        String   @id @default(cuid())
+  path      String                      
+  locale    String?                     
+  createdAt DateTime @default(now())
+
+  @@map("work_stream_audits")
+}

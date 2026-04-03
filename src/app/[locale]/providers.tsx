@@ -2,13 +2,20 @@
 
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useWorkStreamAudit } from "../../hooks/useWorkStreamAudit";
 
 const theme = createTheme();
 
-export default function Providers({ children }: { children: React.ReactNode }) {
+export default function Providers({
+  children,
+  locale,
+}: {
+  children: React.ReactNode;
+  locale: string;
+}) {
+  useWorkStreamAudit(locale);
   return (
     <AppRouterCacheProvider>
-      {/* AppRouterCacheProvider it allow to use "tss-react" package */}
       <ThemeProvider theme={theme}>{children}</ThemeProvider>;
     </AppRouterCacheProvider>
   );
