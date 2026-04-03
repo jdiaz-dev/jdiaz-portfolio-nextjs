@@ -30,7 +30,8 @@ function VideoBackground() {
           left: 0;
           min-width: 100%;
           min-height: 108.5%;
-          background: rgba(15, 32, 39, 0.7);
+          background: #0a192f;
+          opacity: 0.5;
           z-index: -1;
         }
       `}</style>
