@@ -5,6 +5,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Instagram from "@mui/icons-material/Instagram";
+import YouTube from "@mui/icons-material/YouTube";
 
 const TikTokIcon = () => (
   <svg viewBox="0 0 24 24" width="1.25rem" height="1.5rem" fill="currentColor">
@@ -27,6 +28,11 @@ export default function Contact() {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/jonathandiazdev",
       icon: <LinkedInIcon />,
+    },
+    {
+      label: "YouTube",
+      href: "https://www.youtube.com/@jonathan.diaz.software",
+      icon: <YouTube />,
     },
 
     {
