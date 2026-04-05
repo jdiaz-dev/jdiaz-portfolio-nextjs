@@ -10,6 +10,7 @@ const styles = {
   projects: {
     height: "auto",
     fontSize: "120%",
+    marginTop: "5%",
   },
   project: {
     width: "100%",
